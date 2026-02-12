@@ -1,0 +1,223 @@
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#EFF6FF;
+      color:#1E3A8A;
+      line-height:1.6;
+      scroll-behavior: smooth;
+    }
+
+    header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background:#6481ce;
+      padding:15px 40px;
+      color:white;
+      z-index: 1000;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .nav ul{
+      list-style:none;
+      display:flex;
+      gap:25px;
+    }
+
+    .nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .nav ul li a:hover, .nav ul li a:focus{
+      color:#93C5FD;
+      text-decoration: underline;
+    }
+
+    section{
+      padding:60px 40px;
+      max-width:1100px;
+      margin:auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .title h2{
+      font-size:30px;
+      color:#6481ce;
+      position: relative;
+    }
+
+    .title h2::after{
+      content:'';
+      width:60px;
+      height:3px;
+      background:#3B82F6;
+      display:block;
+      margin:10px auto 0;
+      border-radius:2px;
+    }
+
+  /* Hero */
+
+.hero {
+  position: relative;        /* required for ::before */
+  height: 100vh;             /* full screen */
+  text-align: center;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  display: block;
+  inset: 0;
+  background-image: url("./img7.png"); /* your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(6px);       /* blur the background */
+  transform: scale(1.1);   /* prevent edges showing blank */
+  z-index: -1;              /* behind text */
+}
+
+.hero .hbg {
+  background-color: #DBEAFE; /* change to any color you like */
+  padding: 18px; /* gives some space inside */
+  text-align: center; /* center text */
+  border-radius: 10px; /* optional rounded corners */
+  color: rgb(56,126,173);
+}
+
+.hero a {
+  background: #DBEAFE;
+  color: rgb(56,126,173);
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  background: #3B82F6;
+  color: white;
+}
+
+
+    /* Events */
+    .events{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .event-card{
+      background:#DBEAFE;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .event-card:hover{
+      transform: translateY(-5px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .event-card h3{
+      margin-bottom:10px;
+      color:#1D4ED8;
+    }
+
+    
+    /* Gallery */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:20px;
+      justify-items:center;
+    }
+    .gallery-grid img{
+      width:100%;
+      border-radius:12px;
+      transition:0.3s;
+    }
+    .gallery-grid img:hover{
+      transform:scale(1.05);
+    }
+
+    /* FAQ */
+    .faq-item{
+      background:#EFF6FF;
+      padding:20px;
+      margin:15px 0;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    }
+    .faq-item h3{
+      color:#1D4ED8;
+      margin-bottom:10px;
+    }
+
+    /* Contact */
+    .contact form{
+      display:grid;
+      gap:15px;
+    }
+    input, textarea{
+      padding:12px;
+      border:1px solid #93C5FD;
+      border-radius:6px;
+    }
+    button{
+      background:#1D4ED8;
+      color:white;
+      border:none;
+      padding:12px;
+      border-radius:6px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    button:hover{
+      background:#93C5FD;
+    }
+
+    footer{
+      background:#1E40AF;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+      .nav{flex-direction:column;gap:10px;}
+    }
+
